@@ -16,24 +16,11 @@ Available variables are listed below, along with default values (see `defaults/m
 
 The major version of Puppet/OpenVox to be installed.
 
-    puppet_server_package: "puppetserver"
-
-The package to be installed.
-
-    puppet_server_service: "puppetserver"
     puppet_server_service_state: "started"
     puppet_server_service_enabled: true
     puppet_server_service_manage: false
 
 The service that should be run on this server. By default, this role will not manage the Puppet/OpenVox server service.
-
-    puppet_release_deb: "https://apt.puppetlabs.com/puppet{{ puppet_version }}-release-{{ ansible_facts['distribution_release'] }}.deb"
-
-The .deb file for installation on Debian-based OSes.
-
-    puppet_release_rpm: "https://yum.puppetlabs.com/puppet{{ puppet_version }}-release-el-{{ ansible_facts['distribution_major_version'] }}.noarch.rpm"
-
-The .rpm file for installation on RedHat-based OSes.
 
 ## Dependencies
 
