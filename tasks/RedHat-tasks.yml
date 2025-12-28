@@ -1,0 +1,21 @@
+---
+- name: "Ensure repository for {{ puppet_server_package }} is installed"
+  ansible.builtin.dnf:
+    name: "{{ puppet_release_rpm }}"
+    state: present
+    disable_gpg_check: true
+
+- name: "Ensure r10k and build dependencies are present"
+  ansible.builtin.dnf:
+    name:
+      - ruby
+      - ruby-devel
+      - gcc
+      - make
+    state: present
+
+- name: "Ensure r10k is installed"
+  community.general.gem:
+    name: r10k
+    state: present
+    user_install: false

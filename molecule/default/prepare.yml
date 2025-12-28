@@ -1,0 +1,25 @@
+---
+- name: Prepare
+  hosts: all
+  gather_facts: true
+  tasks:
+    - name: "Prepare Debian-based systems"
+      when: ansible_facts.os_family == 'Debian'
+      block:
+        - name: "Ensure manpage directory is present"
+          ansible.builtin.file:
+            path: /usr/share/man/man1
+            state: directory
+            recurse: true
+
+        - name: "Update apt cache if necessary"
+          ansible.builtin.apt:
+            update_cache: true
+
+    - name: "Prepare RedHat-based systems"
+      ansible.builtin.dnf:
+        name:
+          - git
+          - openssh-clients
+        state: present
+      when: ansible_facts.os_family == 'RedHat'

@@ -1,0 +1,5 @@
+---
+- src: https://github.com/LPARS/ansible-role-puppet-agent
+  scm: git
+  version: main
+  name: lpars.puppet_agent

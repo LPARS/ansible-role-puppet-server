@@ -1,0 +1,20 @@
+---
+galaxy_info:
+  author: LPARS
+  namespace: lpars
+  role_name: puppet_server
+  description: "An Ansible role that installs Puppet or OpenVox server on Linux."
+  license: MIT
+  min_ansible_version: "2.18"
+  platforms:
+    - name: EL
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+
+dependencies: []

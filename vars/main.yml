@@ -1,0 +1,3 @@
+---
+puppet_server_package: "puppetserver"
+puppet_server_service: "puppetserver"

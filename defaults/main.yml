@@ -1,0 +1,15 @@
+---
+puppet_version: "7"
+r10k_package: "r10k"
+
+git_server: ""
+git_user: ""
+git_repo: ""
+
+puppet_server_service_state: "started"
+puppet_server_service_enabled: true
+puppet_server_service_manage: true
+
+r10k_ssh_key_path: "/root/.ssh"
+r10k_ssh_private_key: ""
+r10k_ssh_public_key: ""

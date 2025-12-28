@@ -1,0 +1,3 @@
+---
+puppet_release_deb: "https://apt.puppetlabs.com/puppet{{ puppet_version }}-release-{{ ansible_distribution_release }}.deb"
+r10k_path: "/usr/bin/{{ r10k_package }}"

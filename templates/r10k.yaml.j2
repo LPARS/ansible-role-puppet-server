@@ -1,0 +1,7 @@
+---
+cachedir: '/var/cache/r10k'
+
+sources:
+  puppet:
+    basedir: /etc/puppetlabs/code/environments
+    remote: "git@{{ git_server }}:{{ git_user }}/{{ git_repo }}.git"
