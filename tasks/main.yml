@@ -61,7 +61,7 @@
 
 - name: "Trigger {{ r10k_package }} deploy"
   ansible.builtin.command: >
-    {{ r10k_path }} -config /etc/puppetlabs/r10k/r10k.yaml deploy environment -pv
+    {{ r10k_path }} --config /etc/puppetlabs/r10k/r10k.yaml deploy environment -pv
   when: r10k_deploy_result.changed
 
 - name: "Ensure {{ puppet_server_service }} is started and enabled"
