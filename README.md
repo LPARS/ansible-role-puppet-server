@@ -18,12 +18,12 @@ The variant of the server package to install. Choices include puppet or openvox.
 
     puppet_version: "8"
 
-The major version of Puppet/OpenVox to be installed.
+The major version of Puppet/OpenVox to be installed. Defaults to version `8`.
 
     r10k_variant: "r10k"
 
 The variant of the r10k package to install. Choices include r10k and g10k. NOTE: Only used for Debian-based OSes.
-
+Defaults to `r10k`.
     git_server: ""
     git_user: ""
     git_repo: ""
@@ -40,8 +40,8 @@ The service that should be run on this server. By default, this role will not ma
     r10k_ssh_private_key: ""
     r10k_ssh_public_key: ""
 
-The directory where r10k's SSH keys will be copied, and the literal string contents of the keys. Always use Ansible Vault to encrypt the private key.
-Providing the public key is optional but recommended for easier identification.
+The directory where r10k's SSH keys will be copied, and the literal string contents of the keys. 
+Always use Ansible Vault to encrypt the private key. Providing the public key is optional but recommended for easier identification.
 
 ## Dependencies
 
