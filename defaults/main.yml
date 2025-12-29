@@ -8,7 +8,7 @@ git_repo: ""
 
 puppet_server_service_state: "started"
 puppet_server_service_enabled: true
-puppet_server_service_manage: true
+puppet_server_service_manage: false
 
 r10k_ssh_key_path: "/root/.ssh"
 r10k_ssh_private_key: ""
