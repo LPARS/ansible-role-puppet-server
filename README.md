@@ -24,6 +24,7 @@ The major version of Puppet/OpenVox to be installed. Defaults to version `8`.
 
 The variant of the r10k package to install. Choices include r10k and g10k. NOTE: Only used for Debian-based OSes.
 Defaults to `r10k`.
+
     git_server: ""
     git_user: ""
     git_repo: ""
