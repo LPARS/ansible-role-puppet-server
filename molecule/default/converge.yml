@@ -7,4 +7,4 @@
     git_repo: "puppet"
     r10k_ssh_private_key: "{{ lookup('ansible.builtin.env', 'SSH_PRIVATE_KEY') }}"
   roles:
-    - role: ../../../ansible-role-puppet-server
+    - role: ../../../lpars.puppet_server
