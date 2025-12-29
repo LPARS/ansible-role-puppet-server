@@ -5,6 +5,9 @@
     git_server: "github.com"
     git_user: "LPARS"
     git_repo: "puppet"
+    puppet_version: "8"
+    r10k_package: "g10k"
+    puppet_server_service_manage: true
     r10k_ssh_private_key: "{{ lookup('ansible.builtin.env', 'SSH_PRIVATE_KEY') }}"
   roles:
     - role: lpars.puppet_server
