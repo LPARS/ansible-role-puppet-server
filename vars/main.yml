@@ -1,3 +1,8 @@
 ---
-puppet_server_package: "puppetserver"
+puppet_package_map:
+  puppet: "puppetserver"
+  openvox: "openvox-server"
+
+puppet_server_package: "{{ puppet_package_map[puppet_variant] }}"
+
 puppet_server_service: "puppetserver"

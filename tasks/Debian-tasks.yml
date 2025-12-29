@@ -10,8 +10,8 @@
     update_cache: true
   when: puppet_release_deb_install.changed
 
-- name: "Ensure {{ r10k_package }} is installed"
+- name: "Ensure {{ r10k_variant }} is installed"
   ansible.builtin.package:
     name:
-      - "{{ r10k_package }}"
+      - "{{ r10k_variant }}"
     state: present

@@ -1,6 +1,7 @@
 ---
-puppet_version: "7"
-r10k_package: "r10k"
+puppet_variant: "openvox"
+puppet_version: "8"
+r10k_variant: "r10k"
 
 git_server: ""
 git_user: ""

@@ -1,3 +1,8 @@
 ---
-puppet_release_rpm: "https://yum.puppetlabs.com/puppet{{ puppet_version }}-release-el-{{ ansible_distribution_major_version }}.noarch.rpm"
+puppet_release_map:
+  puppet: "https://yum.puppetlabs.com/puppet{{ puppet_version }}-release-el-{{ ansible_distribution_major_version }}.noarch.rpm"
+  openvox: "https://yum.voxpupuli.org/openvox{{ puppet_version }}-release-el-{{ ansible_distribution_major_version }}.noarch.rpm"
+
+puppet_release_rpm: "{{ puppet_release_map[puppet_variant] }}"
+
 r10k_path: "/usr/local/bin/r10k"

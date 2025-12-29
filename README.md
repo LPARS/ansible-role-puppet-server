@@ -12,13 +12,17 @@ None.
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
-    puppet_version: "7"
+    puppet_variant: "openvox"
+
+The variant of the server package to install. Choices include puppet or openvox. Defaults to `openvox`.
+
+    puppet_version: "8"
 
 The major version of Puppet/OpenVox to be installed.
 
-    r10k_package: "r10k"
+    r10k_variant: "r10k"
 
-The r10k package to use. Choices include r10k and g10k. NOTE: Only used for Debian-based OSes.
+The variant of the r10k package to install. Choices include r10k and g10k. NOTE: Only used for Debian-based OSes.
 
     git_server: ""
     git_user: ""

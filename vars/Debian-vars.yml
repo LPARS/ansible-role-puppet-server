@@ -1,3 +1,14 @@
 ---
-puppet_release_deb: "https://apt.puppetlabs.com/puppet{{ puppet_version }}-release-{{ ansible_distribution_release }}.deb"
-r10k_path: "/usr/bin/{{ r10k_package }}"
+version_fact_map:
+  Debian: "{{ ansible_distribution_major_version }}"
+  Ubuntu: "{{ ansible_distribution_version }}"
+
+distro_id: "{{ ansible_distribution | lower }}{{ version_fact_map[ansible_distribution] }}"
+
+puppet_release_map:
+  puppet: "https://apt.puppetlabs.com/puppet{{ puppet_version }}-release-{{ ansible_distribution_release }}.deb"
+  openvox: "https://apt.voxpupuli.org/openvox{{ puppet_version }}-release-{{ distro_id }}.deb"
+
+puppet_release_deb: "{{ puppet_release_map[puppet_variant] }}"
+
+r10k_path: "/usr/bin/{{ r10k_variant }}"
