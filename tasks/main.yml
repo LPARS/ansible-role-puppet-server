@@ -42,6 +42,11 @@
       - "{{ puppet_server_package }}"
     state: present
 
+- name: "Ensure git is installed"
+  ansible.builtin.package:
+    name: git
+    state: present
+
 - name: "Ensure /etc/puppetlabs/r10k exists"
   ansible.builtin.file:
     path: /etc/puppetlabs/r10k
