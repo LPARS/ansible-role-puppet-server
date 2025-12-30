@@ -35,7 +35,7 @@ The Git server, user/organization, and repository that will be used by r10k to c
     puppet_server_service_enabled: true
     puppet_server_service_manage: false
 
-The service that should be run on this server. By default, this role will not manage the Puppet/OpenVox server service.
+The state of the Puppet/OpenVox server service. By default, this role will not manage it.
 
     r10k_ssh_key_path: "/root/.ssh"
     r10k_ssh_private_key: ""
