@@ -1,12 +1,12 @@
 ---
 version_fact_map:
-  Debian: "{{ ansible_distribution_major_version }}"
-  Ubuntu: "{{ ansible_distribution_version }}"
+  Debian: "{{ ansible_facts['distribution_major_version'] }}"
+  Ubuntu: "{{ ansible_facts['distribution_version'] }}"
 
-distro_id: "{{ ansible_distribution | lower }}{{ version_fact_map[ansible_distribution] }}"
+distro_id: "{{ ansible_facts['distribution'] | lower }}{{ version_fact_map[ansible_facts['distribution']] }}"
 
 puppet_release_map:
-  puppet: "https://apt.puppetlabs.com/puppet{{ puppet_version }}-release-{{ ansible_distribution_release }}.deb"
+  puppet: "https://apt.puppetlabs.com/puppet{{ puppet_version }}-release-{{ ansible_facts['distribution_release'] }}.deb"
   openvox: "https://apt.voxpupuli.org/openvox{{ puppet_version }}-release-{{ distro_id }}.deb"
 
 puppet_release_deb: "{{ puppet_release_map[puppet_variant] }}"
