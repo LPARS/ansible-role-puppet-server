@@ -54,6 +54,7 @@ To install ansible-role-puppet-agent, use the included `requirements.yml`.
 
     - name: Install and configure Puppet/OpenVox server
       hosts: all
+      gather_facts: true
       become: true
       roles:
         - lpars.puppet_server
